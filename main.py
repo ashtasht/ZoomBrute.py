@@ -13,13 +13,13 @@ works = 'false'
 
 #Ask user for proxy, if any.
 print('Input a proxy, press enter for none.')
-print('eg: 1.1.1.1:1111')
-PROXY = input()
+print('r u a gangstterr script kiddie yo yo??')
 
 browser = webdriver.Firefox() #Add the proxy to Firefox
 
 time.sleep(.5)
 while istrue == 'true': #Infinite while loop
+    print("listen to brain dmg by green dayyyyy")
     rand=random.uniform(0, 1) #Generate random number to determine if it should be a 10 char code or a 9 char code
     if rand > 0.5: #If it's above 0.5, make it a 9 char code
         id=random.randrange(100000000, 999999999, 6)
@@ -27,6 +27,7 @@ while istrue == 'true': #Infinite while loop
         id=random.randrange(1000000000, 9999999999, 6)
     joinid='https://zoom.us/wc/join/' + str(id) #put the code into the url
     print("trying code " + str(id))
+    print("btw did u know that megadeth covered anarchy in the uk? I never noticed that")
     browser.get((joinid)) #Open the webbrowser / refresh
     if len(browser.find_elements_by_id('inputname')) > 0: #Check if it can find the name input (means that the code works
         print('Code ' + str(id) + ' works!')
