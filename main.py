@@ -18,7 +18,7 @@ PROXY = input()
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--proxy-server=%s' % PROXY)
 
-browser = webdriver.Chrome(options=chrome_options) #Add the proxy to chrome
+browser = webdriver.Firefox(options=chrome_options) #Add the proxy to chrome
 
 time.sleep(.5)
 while istrue == 'true': #Infinite while loop
@@ -42,4 +42,4 @@ while istrue == 'true': #Infinite while loop
         f.close()
     elif len(browser.find_elements_by_id('recaptcha-anchor-label')) > 0: #Try to find the google recaptcha
         print('You might have been banned.!')
-    time.sleep(0.5) #Wait 0.5 seconds before trying again
+    time.sleep(0.5) # Wait 0.5 seconds before trying again
