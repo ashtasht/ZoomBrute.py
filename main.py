@@ -15,10 +15,8 @@ works = 'false'
 print('Input a proxy, press enter for none.')
 print('eg: 1.1.1.1:1111')
 PROXY = input()
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--proxy-server=%s' % PROXY)
 
-browser = webdriver.Firefox(options=chrome_options) #Add the proxy to chrome
+browser = webdriver.Firefox() #Add the proxy to Firefox
 
 time.sleep(.5)
 while istrue == 'true': #Infinite while loop
